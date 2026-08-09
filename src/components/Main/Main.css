@@ -1,0 +1,257 @@
+.main{
+  flex:1;
+  min-height: 100vh;
+  padding-bottom: 15vh;
+  position :relative;
+}
+.main .nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 20px;
+  color: 	#3b003b;
+}
+.main .nav img{
+  width:50px;
+  border-radius:  50%;
+  margin-right: 20px;
+}
+.main-container{
+  max-width: 900px;
+  margin:auto;
+}
+.main .greet{
+  margin: 50px 0px;
+  font-size: 22px;
+  color:#3b003b;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.main .greet span{
+  font-size: 30px;
+  background: -webkit-linear-gradient(16deg, 	#3b003b, #ff89ff );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart{
+  color:#ff89ff;
+}
+.main-bottom{
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  max-width:900px;
+  padding: 0px 20px;
+  margin:auto;
+}
+.searchbox{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:20px;
+  background-color: #3b003b;
+  padding:10px 20px;
+  border-radius: 50px;
+}
+.searchbox .icon{
+  width:24px;
+  cursor: pointer;
+  color: white;
+}
+.searchbox input{
+  flex:1;
+  background: transparent;
+  border:none;
+  outline:none;
+  padding: 8px;
+  font-size: 18px;
+  color: white;
+}
+.searchbox input::placeholder{
+  color: white;
+  opacity: 0.7;
+}
+.main .bottom-info{
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+  opacity: 0.7;
+}
+.result{
+  padding: 0px 5% 100px 5%;
+  max-height:70vh;
+  overflow-y: scroll;
+}
+.result::-webkit-scrollbar{
+  display:none;
+}
+.result-title{
+  margin:40px 0px;
+  display:flex;
+  align-items:start;
+  gap: 20px;
+  background-color: #3b003b;
+  color: white;
+  padding:10px 20px;
+  border-radius: 50px;
+  opacity: 0.8;
+  width: fit-content;
+  margin-left: auto;
+}
+.result img{
+  width:25px;
+  border-radius: 50%;
+}
+.result-data{
+  display:flex;
+  align-items: start;
+  gap:20px;
+}
+.result-data p{
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.result-data ul,
+.result-data ol{
+  padding-left: 25px;
+  margin: 15px 0px;
+}
+
+.result-data li{
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.result-data h1,
+.result-data h2,
+.result-data h3{
+  margin: 25px 0px 15px 0px;
+  line-height: 1.4;
+}
+
+.result-data pre{
+  margin: 15px 0px;
+  line-height: 1.6;
+}
+.loader{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+.loader hr{
+  border-radius: 4px;
+  border: none;
+  background-color: 	#ffd8ff;
+  background: linear-gradient(to right, #ff89ff, 	#ffd8ff, 	white );
+  background-size: 800px 50px;
+  height:20px;
+  animation: loader 3s infinite linear;
+}
+@keyframes loader{
+  0%{
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+}
+.result-data p{
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main .nav{
+    font-size: 22px;
+    padding: 15px;
+  }
+  .main .nav img{
+    width: 40px;
+  }
+  .main-container{
+    padding: 0px 10px;
+  }
+  .main .greet{
+    font-size: 18px;
+    margin: 30px 0px;
+  }
+  .main .greet span{
+    font-size: 24px;
+  }
+  .result-title{
+    max-width: 85%;
+  }
+  .result-data p{
+    font-size: 15px;
+  }
+  .searchbox{
+    padding: 8px 14px;
+    gap: 10px;
+  }
+  .searchbox input{
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main .nav{
+    font-size: 22px;
+    padding: 15px;
+  }
+  .main .nav img{
+    width: 40px;
+  }
+  .main-container{
+    padding: 0px 10px;
+  }
+  .main .greet{
+    font-size: 18px;
+    margin: 30px 0px;
+  }
+  .main .greet span{
+    font-size: 24px;
+  }
+  .result-title{
+    max-width: 85%;
+  }
+  .result-data p{
+    font-size: 15px;
+  }
+  .searchbox{
+    padding: 8px 14px;
+    gap: 10px;
+  }
+  .searchbox input{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .nav{
+    font-size: 18px;
+  }
+  .main .greet{
+    font-size: 16px;
+  }
+  .main .greet span{
+    font-size: 20px;
+  }
+}
